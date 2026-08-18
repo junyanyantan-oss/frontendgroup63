@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="News at UTAR Esports Club">
+    <title>News | UTAR Esports Club</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/esports-club.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse order-lg-1" id="mainNavigation">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="game.html">Games</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tournament.html">Tournaments</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ranking.html">Rankings</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                </ul>
+            </div>
+            <a class="navbar-brand club-home-link fw-bold d-flex align-items-center ms-auto order-lg-2" href="index.html" aria-label="Return to homepage">
+                <span>UTAR ESPORTS CLUB</span>
+                <img src="images/FrontendLogo.png" alt="UTAR Esports Club logo" class="brand-logo-img ms-2">
+            </a>
+        </div>
+    </nav>
+    <main>
+<div id="news-section" class="page-view active-view">
+        <header class="hero-header text-center">
+            <div class="container">
+                <h1 class="display-5 fw-bold text-white mb-2">Club Announcements & News</h1>
+                <p class="text-light">Stay updated with official bulletins, trials, meetings, and varsity notices.</p>
+            </div>
+        </header>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+                    <div class="d-flex flex-wrap gap-2" id="filterButtonGroup">
+                        <button class="filter-btn active" data-filter="all">All Bulletins</button>
+                        <button class="filter-btn" data-filter="general">General</button>
+                        <button class="filter-btn" data-filter="trials">Trials & Teams</button>
+                        <button class="filter-btn" data-filter="events">Events</button>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <input type="text" id="newsSearch" class="form-control" placeholder="Search announcements...">
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="newsContainer">
+                    <!-- Announcement 1 -->
+                    <div class="col news-item" data-category="general">
+                        <div class="news-card p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="news-badge">General Notice</span>
+                                <small class="text-light"><i class="fa-regular fa-calendar me-1 text-yellow"></i>Aug 10, 2026</small>
+                            </div>
+                            <h3 class="h5 fw-bold text-white mb-2">Annual General Meeting & Committee Election</h3>
+                            <p class="small text-light flex-grow-1">
+                                Nominations for the 2026/2027 Executive Committee are now open. All registered club members are invited to attend and vote.
+                            </p>
+                            <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                                <span class="small text-yellow"><i class="fa-solid fa-bullhorn me-1"></i>Important</span>
+                                <button class="btn-read-more news-details" type="button" data-date="Aug 10, 2026" data-content="Nominations for the 2026/2027 Executive Committee are now officially open. All registered members are invited to attend and cast votes in Room G011 on September 5th at 7:30 PM.">Read More &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Announcement 2 -->
+                    <div class="col news-item" data-category="trials">
+                        <div class="news-card p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="news-badge">Trials & Teams</span>
+                                <small class="text-light"><i class="fa-regular fa-calendar me-1 text-yellow"></i>Aug 05, 2026</small>
+                            </div>
+                            <h3 class="h5 fw-bold text-white mb-2">UTAR Varsity Squad Tryouts (Valorant & HoK)</h3>
+                            <p class="small text-light flex-grow-1">
+                                Scouting high-tier players (Immortal+ in Valorant, Master+ in HoK) to represent UTAR in MASISWA Inter-University Games.
+                            </p>
+                            <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                                <span class="small text-yellow"><i class="fa-solid fa-users me-1"></i>Varsity</span>
+                                <button class="btn-read-more news-details" type="button" data-date="Aug 05, 2026" data-content="Scouting is underway for our representative rosters. Selected players will receive club jerseys, subsidized tournament entrance fees, and access to the dedicated esports training lab.">Read More &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Announcement 3 -->
+                    <div class="col news-item" data-category="events">
+                        <div class="news-card p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="news-badge">Events</span>
+                                <small class="text-light"><i class="fa-regular fa-calendar me-1 text-yellow"></i>Jul 28, 2026</small>
+                            </div>
+                            <h3 class="h5 fw-bold text-white mb-2">Esports LAN Viewing Party: Worlds 2026</h3>
+                            <p class="small text-light flex-grow-1">
+                                Join us at the UTAR Student Pavilion for our big-screen live watch party. Free snacks, lucky draws, and friendly 1v1 mini-tournaments.
+                            </p>
+                            <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                                <span class="small text-yellow"><i class="fa-solid fa-tv me-1"></i>Community</span>
+                                <button class="btn-read-more news-details" type="button" data-date="Jul 28, 2026" data-content="Watch the grand finals live with fellow summoners on the 150-inch projector screen at the Student Pavilion. Doors open at 5:00 PM. No registration fee required!">Read More &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- UNIVERSAL MODALS                                          -->
+    <!-- ========================================================= -->
+    </main>
+
+    <!-- Discord Modal -->
+    <div class="modal fade" id="chatModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3 text-center">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <i class="fa-brands fa-discord text-primary display-4 mb-3"></i>
+                    <h3 class="h5 fw-bold text-white" id="modalGameTitle">Game Chat</h3>
+                    <p class="text-light small mb-4" id="modalChannelInfo">Connecting to UTAR official server channel...</p>
+                    <a href="https://discord.com" target="_blank" class="btn btn-discord btn-lg w-100 rounded-pill shadow">
+                        <i class="fa-solid fa-arrow-up-right-from-square me-2"></i>Launch Discord Channel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tournament Registration Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title fw-bold text-yellow" id="modalTourneyTitle">Tournament Registration</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="tourneyForm">
+                    <div class="modal-body">
+                        <input type="hidden" id="modalTourneyId">
+                        <div class="mb-3">
+                            <label class="form-label small text-light">Game Title</label>
+                            <input type="text" id="modalGameName" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-light">Team Name *</label>
+                            <input type="text" class="form-control" id="teamName" required placeholder="e.g. Harimau Kings">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-light">Captain Name *</label>
+                            <input type="text" class="form-control" id="captainName" required placeholder="Full Name">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label small text-light">Student ID *</label>
+                                <input type="text" class="form-control" id="studentId" required placeholder="e.g. 2301234">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label small text-light">Contact / Discord *</label>
+                                <input type="text" class="form-control" id="contactInfo" required placeholder="012-3456789">
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="agreeRules" required>
+                            <label class="form-check-label small text-light" for="agreeRules">I confirm all members are active UTAR students.</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-secondary">
+                        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-warning fw-bold bg-yellow border-0">Confirm Registration</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Details Modal -->
+    <div class="modal fade" id="newsDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title fw-bold text-yellow" id="modalNewsTitle">Announcement</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="small text-light mb-3"><i class="fa-regular fa-calendar text-yellow me-1"></i> Posted on: <span id="modalNewsDate"></span></p>
+                    <p id="modalNewsContent" class="text-white news-modal-content"></p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-warning bg-yellow text-dark fw-bold border-0" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 text-light">
+        <div class="container">
+            <p class="mb-0 small">&copy; 2026 UTAR Esports Club. Built for UCCD2323 Assignment.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/esports-club.js"></script>
+</body>
+</html>
+
