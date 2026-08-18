@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTAR Esports Club - Register</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/esports-club.css" rel="stylesheet">
+    <link href="css/forms.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse order-3 order-lg-1" id="mainNavigation">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="game.html">Games</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tournament.html">Tournaments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ranking.html">Rankings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="register.html">Join Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a class="navbar-brand club-home-link fw-bold d-flex align-items-center ms-auto order-2" href="index.html" aria-label="Return to homepage">
+                <span class="d-none d-sm-inline">UTAR ESPORTS CLUB</span>
+                <img src="images/utaresportclublogo.png" alt="UTAR Esports Club logo" class="brand-logo-img ms-2">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-header text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold text-white mb-2">Join UTAR Esports Club</h1>
+            <p class="text-light">Register now to unlock game divisions, weekly sessions, and Discord channels.</p>
+        </div>
+    </header>
+
+    <!-- Register Form -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+
+                    <div class="register-card">
+                        <div class="card-header d-flex align-items-center">
+                            <i class="fa-solid fa-user-plus text-yellow me-3 fs-4"></i>
+                            <div>
+                                <h2 class="h5 fw-bold text-white mb-0">Member Registration</h2>
+                                <small class="text-light">Fill in your details to join the club</small>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-4 p-md-5">
+                            <form id="registerForm" novalidate>
+                                <!-- Full Name -->
+                                <div class="mb-3">
+                                    <label for="fullName" class="form-label">Full Name <span
+                                            class="text-yellow">*</span></label>
+                                    <input type="text" class="form-control" id="fullName" placeholder="e.g. Tan Ah Ming"
+                                        required>
+                                    <div class="invalid-feedback">Please enter your full name.</div>
+                                </div>
+
+                                <!-- Student ID -->
+                                <div class="mb-3">
+                                    <label for="studentId" class="form-label">Student ID <span
+                                            class="text-yellow">*</span></label>
+                                    <input type="text" class="form-control" id="studentId" placeholder="e.g. 12ABC34567"
+                                        pattern="[A-Za-z0-9]{9}" required>
+                                    <div class="invalid-feedback">Please enter your Student ID.</div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address <span
+                                            class="text-yellow">*</span></label>
+                                    <input type="email" class="form-control" id="email" placeholder="yourname@1utar.my"
+                                        required>
+                                    <div class="invalid-feedback">Please enter a valid email.</div>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="e.g. 012-3456789">
+                                </div>
+
+                                <!-- Faculty & Year -->
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <label for="faculty" class="form-label">Faculty <span
+                                                class="text-yellow">*</span></label>
+                                        <select class="form-select" id="faculty" required>
+                                            <option value="" selected disabled>Select Faculty</option>
+                                            <option value="FICT">Faculty of Information and Communication Technology
+                                                (FICT)</option>
+                                            <option value="FEGT">Faculty of Engineering and Green Technology (FEGT)
+                                            </option>
+                                            <option value="THP FBF">Teh Hong Piow Faculty of Business and Finance (THP
+                                                FBF)</option>
+                                            <option value="FAS">Faculty of Arts and Social Science (FAS)</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select your faculty.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="year" class="form-label">Year of Study <span
+                                                class="text-yellow">*</span></label>
+                                        <select class="form-select" id="year" required>
+                                            <option value="" selected disabled>Select Year</option>
+                                            <option value="Y1">Year 1</option>
+                                            <option value="Y2">Year 2</option>
+                                            <option value="Y3">Year 3</option>
+                                            <option value="Y4">Year 4</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select your year.</div>
+                                    </div>
+                                </div>
+
+                                <!-- Main Games -->
+                                <div class="mb-3">
+                                    <label class="form-label">Main Games You Play <span
+                                            class="text-yellow">*</span></label>
+                                    <div class="row g-2">
+                                        <div class="col-sm-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="Honor of Kings"
+                                                    id="gameHOK">
+                                                <label class="form-check-label" for="gameHOK">Honor of Kings</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="Valorant"
+                                                    id="gameValo">
+                                                <label class="form-check-label" for="gameValo">Valorant</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    value="League of Legends" id="gameLoL">
+                                                <label class="form-check-label" for="gameLoL">League of Legends</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="Dota 2"
+                                                    id="gameDota">
+                                                <label class="form-check-label" for="gameDota">Dota 2</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="Counter-Strike 2"
+                                                    id="gameCS2">
+                                                <label class="form-check-label" for="gameCS2">Counter-Strike 2</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="Other"
+                                                    id="gameOther">
+                                                <label class="form-check-label" for="gameOther">Other</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-text text-secondary mt-1">Select at least one game</div>
+                                </div>
+
+                                <!-- Discord -->
+                                <div class="mb-3">
+                                    <label for="discord" class="form-label">Discord Username</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-dark border-secondary text-light">
+                                            <i class="fa-brands fa-discord"></i>
+                                        </span>
+                                        <input type="text" class="form-control" id="discord"
+                                            placeholder="e.g. username#1234 or username">
+                                    </div>
+                                </div>
+
+                                <!-- Reason -->
+                                <div class="mb-4">
+                                    <label for="reason" class="form-label">Why do you want to join? (optional)</label>
+                                    <textarea class="form-control" id="reason" rows="3"
+                                        placeholder="Tell us a bit about yourself..."></textarea>
+                                </div>
+
+                                <!-- Agreement -->
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                    <label class="form-check-label" for="agreeTerms">
+                                        I agree to follow the club rules and code of conduct <span
+                                            class="text-yellow">*</span>
+                                    </label>
+                                    <div class="invalid-feedback">You must agree before submitting.</div>
+                                </div>
+
+                                <!-- Submit -->
+                                <button type="submit" class="btn btn-register w-100 mb-3">
+                                    <i class="fa-solid fa-paper-plane me-2"></i> Submit Registration
+                                </button>
+
+                                <div class="text-center">
+                                    <small class="text-secondary">Already a member? Check the <a href="game.html"
+                                            class="text-yellow text-decoration-none">Games</a> page to join chat
+                                        channels.</small>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Info Box -->
+                    <div class="info-box mt-4">
+                        <div class="d-flex">
+                            <i class="fa-solid fa-circle-info text-yellow me-3 mt-1"></i>
+                            <div>
+                                <strong class="text-white">What happens after registration?</strong>
+                                <p class="mb-0 small text-light mt-1">
+                                    You will receive a confirmation email and get access to the official Discord server.
+                                    Selected games will unlock their dedicated chat channels automatically.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3 text-center">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <i class="fa-solid fa-circle-check text-yellow display-4 mb-3"></i>
+                    <h3 class="h5 fw-bold text-white">Registration Successful!</h3>
+                    <p class="text-light small mb-4">
+                        Welcome to UTAR Esports Club. Check your email for next steps and join our Discord server.
+                    </p>
+                    <a href="game.html" class="btn btn-register btn-lg w-100 rounded-pill">
+                        Go to Games Page
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 text-light">
+        <div class="container">
+            <p class="mb-0 small">&copy; 2026 UTAR Esports Club. Built for UCCD2323 Assignment.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Custom Script -->
+    <script src="js/forms.js"></script>
+</body>
+
+</html>
+

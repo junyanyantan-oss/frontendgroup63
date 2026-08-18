@@ -1,0 +1,127 @@
+.register-card,
+.contact-card {
+    overflow: hidden;
+    background-color: var(--utar-navy-card);
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.register-card .card-header,
+.contact-card .card-header {
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, var(--utar-navy) 0%, #1a2158 100%);
+    border-bottom: 2px solid var(--utar-yellow);
+}
+
+.register-card .form-label,
+.contact-card .form-label {
+    margin-bottom: 0.4rem;
+    color: #e5e7eb;
+    font-weight: 600;
+}
+
+.register-card .form-control,
+.register-card .form-select,
+.contact-card .form-control,
+.contact-card .form-select {
+    padding: 0.7rem 1rem;
+    background-color: #0d1230;
+    border-radius: 10px;
+}
+
+.form-control::placeholder {
+    color: #6b7280;
+}
+
+.form-select option {
+    color: #ffffff;
+    background-color: #0d1230;
+}
+
+.form-check-input {
+    background-color: #0d1230;
+    border: 1px solid var(--border-color);
+}
+
+.form-check-input:checked {
+    background-color: var(--utar-yellow);
+    border-color: var(--utar-yellow);
+}
+
+.form-check-label {
+    color: #d1d5db;
+}
+
+.register-card .btn-register,
+.contact-card .btn-submit,
+.modal-content .btn-submit {
+    padding: 0.85rem;
+    color: var(--utar-navy);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background-color: var(--utar-yellow);
+    border: 0;
+    border-radius: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.register-card .btn-register:hover,
+.contact-card .btn-submit:hover,
+.modal-content .btn-submit:hover {
+    color: var(--utar-navy);
+    background-color: #e6d900;
+    box-shadow: 0 6px 20px rgba(255, 242, 0, 0.35);
+    transform: translateY(-2px);
+}
+
+.info-box {
+    padding: 1rem 1.25rem;
+    background-color: rgba(255, 242, 0, 0.08);
+    border: 1px solid rgba(255, 242, 0, 0.3);
+    border-radius: 12px;
+}
+
+.info-card {
+    height: 100%;
+    padding: 1.4rem;
+    overflow-wrap: anywhere;
+    background-color: var(--utar-navy-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.info-card:hover {
+    border-color: var(--utar-yellow);
+    transform: translateY(-4px);
+}
+
+.info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.9rem;
+    color: var(--utar-yellow);
+    font-size: 1.3rem;
+    background: rgba(255, 242, 0, 0.15);
+    border-radius: 12px;
+}
+
+.invalid-feedback {
+    color: #ff6b6b;
+    font-weight: 500;
+}
+
+@media (max-width: 575.98px) {
+    .register-card .card-header,
+    .contact-card .card-header {
+        padding: 1rem;
+    }
+
+    .info-card {
+        padding: 1rem 0.75rem;
+    }
+}

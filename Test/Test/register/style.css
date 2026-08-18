@@ -1,0 +1,211 @@
+:root {
+    --utar-navy: #131943;
+    --utar-navy-dark: #0a0d26;
+    --utar-navy-card: #161c4a;
+    --utar-yellow: #fff200;
+    --border-color: #2b3573;
+    --discord-color: #5865F2;
+}
+
+body {
+    background-color: var(--utar-navy-dark);
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--utar-navy);
+    border-bottom: 3px solid var(--utar-yellow);
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    letter-spacing: 1px;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.brand-logo-img {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-link {
+    color: #d1d5db !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--utar-yellow) !important;
+}
+
+.nav-link.active {
+    color: var(--utar-yellow) !important;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero-header {
+    background: linear-gradient(rgba(10, 13, 38, 0.88), rgba(10, 13, 38, 0.98)), url('valo.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0 40px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Utility Classes */
+.text-yellow {
+    color: var(--utar-yellow) !important;
+}
+
+.bg-yellow {
+    background-color: var(--utar-yellow) !important;
+    color: #000000 !important;
+}
+
+/* Cards (Register & Contact) */
+.register-card,
+.contact-card {
+    background-color: var(--utar-navy-card);
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.register-card .card-header,
+.contact-card .card-header {
+    background: linear-gradient(135deg, var(--utar-navy) 0%, #1a2158 100%);
+    border-bottom: 2px solid var(--utar-yellow);
+    padding: 1.25rem 1.5rem;
+}
+
+/* Form Controls */
+.form-label {
+    font-weight: 600;
+    color: #e5e7eb;
+    margin-bottom: 0.4rem;
+}
+
+.form-control,
+.form-select {
+    background-color: #0d1230;
+    border: 1px solid var(--border-color);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #0d1230;
+    border-color: var(--utar-yellow);
+    box-shadow: 0 0 0 0.2rem rgba(255, 242, 0, 0.25);
+    color: #ffffff;
+}
+
+.form-control::placeholder {
+    color: #6b7280;
+}
+
+.form-select option {
+    background-color: #0d1230;
+    color: #ffffff;
+}
+
+.form-check-input {
+    background-color: #0d1230;
+    border: 1px solid var(--border-color);
+}
+
+.form-check-input:checked {
+    background-color: var(--utar-yellow);
+    border-color: var(--utar-yellow);
+}
+
+.form-check-label {
+    color: #d1d5db;
+}
+
+/* Buttons */
+.btn-register,
+.btn-submit {
+    background-color: var(--utar-yellow);
+    color: #000000;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    padding: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+}
+
+.btn-register:hover,
+.btn-submit:hover {
+    background-color: #e6d900;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 242, 0, 0.35);
+}
+
+/* Info Box (Register Page) */
+.info-box {
+    background-color: rgba(255, 242, 0, 0.08);
+    border: 1px solid rgba(255, 242, 0, 0.3);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+}
+
+/* Info Cards (Contact Page) */
+.info-card {
+    background-color: var(--utar-navy-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.4rem;
+    height: 100%;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--utar-yellow);
+}
+
+.info-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 242, 0, 0.15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--utar-yellow);
+    margin-bottom: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--utar-navy-dark);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Modals */
+.modal-content {
+    background-color: var(--utar-navy);
+    border: 2px solid var(--border-color);
+    color: #ffffff;
+    border-radius: 16px;
+}
+
+/* Validation Feedback */
+.invalid-feedback {
+    color: #ff6b6b;
+    font-weight: 500;
+}
