@@ -239,9 +239,14 @@
 
         .nav-pills .nav-link.active {
             background-color: var(--utar-yellow);
-            color: #000000;
+            color: var(--utar-navy) !important;
             border-color: var(--utar-yellow);
             box-shadow: 0 4px 15px rgba(255, 242, 0, 0.3);
+        }
+
+        .nav-pills .nav-link.active:hover,
+        .nav-pills .nav-link.active:focus-visible {
+            color: var(--utar-navy) !important;
         }
 
         .podium-card {
