@@ -291,15 +291,26 @@
             const TOURNEY_KEY = 'utar_esports_registered_tournaments';
 
             function getRegistrations() {
-                const data = localStorage.getItem(TOURNEY_KEY);
-                return data ? JSON.parse(data) : [];
+                try {
+                    const data = JSON.parse(localStorage.getItem(TOURNEY_KEY) || '[]');
+                    return Array.isArray(data) ? data : [];
+                } catch (error) {
+                    console.warn('Tournament registrations could not be loaded.', error);
+                    return [];
+                }
             }
 
             function saveRegistration(item) {
-                let regs = getRegistrations().filter(r => r.id !== item.id);
-                regs.push(item);
-                localStorage.setItem(TOURNEY_KEY, JSON.stringify(regs));
-                updateTournamentsUI();
+                try {
+                    const registrations = getRegistrations().filter(registration => registration.id !== item.id);
+                    registrations.push(item);
+                    localStorage.setItem(TOURNEY_KEY, JSON.stringify(registrations));
+                    updateTournamentsUI();
+                    return true;
+                } catch (error) {
+                    console.error('Tournament registration could not be saved.', error);
+                    return false;
+                }
             }
 
             function updateTournamentsUI() {
@@ -349,11 +360,16 @@
                     captain: $('#captainName').val(),
                     studentId: $('#studentId').val(),
                     contact: $('#contactInfo').val(),
-                    date: new Date().toLocaleDateString()
+                    date: new Date().toLocaleDateString(),
+                    submittedAt: new Date().toISOString()
                 };
-                saveRegistration(regData);
-                regModal.hide();
-                alert(`Successfully registered ${regData.team}!`);
+                if (saveRegistration(regData)) {
+                    regModal.hide();
+                    this.reset();
+                    alert(`Successfully registered ${regData.team}! Your registration was saved in this browser.`);
+                } else {
+                    alert('Your registration could not be saved. Please check your browser storage settings and try again.');
+                }
             });
 
             // 5. NEWS FILTER LOGIC
@@ -412,9 +428,14 @@
 
         function cancelRegistration(tourneyId) {
             if (confirm("Cancel team registration for this tournament?")) {
-                let regs = JSON.parse(localStorage.getItem('utar_esports_registered_tournaments') || '[]').filter(r => r.id !== tourneyId);
-                localStorage.setItem('utar_esports_registered_tournaments', JSON.stringify(regs));
-                location.reload();
+                try {
+                    const registrations = JSON.parse(localStorage.getItem('utar_esports_registered_tournaments') || '[]');
+                    const remaining = Array.isArray(registrations) ? registrations.filter(item => item.id !== tourneyId) : [];
+                    localStorage.setItem('utar_esports_registered_tournaments', JSON.stringify(remaining));
+                    location.reload();
+                } catch (error) {
+                    alert('The registration could not be cancelled. Please try again.');
+                }
             }
         }
 

@@ -115,6 +115,14 @@
     font-weight: 500;
 }
 
+.feedback-summary {
+    display: none;
+}
+
+.feedback-time {
+    font-size: 0.75rem;
+}
+
 @media (max-width: 575.98px) {
     .register-card .card-header,
     .contact-card .card-header {

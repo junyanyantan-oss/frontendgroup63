@@ -197,9 +197,20 @@
                 <div class="modal-body pt-0">
                     <i class="fa-solid fa-circle-check text-yellow display-4 mb-3"></i>
                     <h3 class="h5 fw-bold text-white">Message Sent!</h3>
-                    <p class="text-light small mb-4">
-                        Thank you for contacting us. Our team will reply to your email soon.
+                    <p class="text-light small mb-3">
+                        Thank you for contacting us. Your message has been saved in this browser.
                     </p>
+
+                    <div id="feedbackSummaryBox" class="feedback-summary text-start p-3 mb-3 rounded bg-dark border border-warning">
+                        <h6 class="text-yellow fw-bold mb-2 small"><i class="fa-solid fa-database me-1"></i> Saved feedback:</h6>
+                        <div class="small text-light">
+                            <p class="mb-1"><strong>Name:</strong> <span id="savedName" class="text-warning"></span></p>
+                            <p class="mb-1"><strong>Email:</strong> <span id="savedEmail"></span></p>
+                            <p class="mb-1"><strong>Subject:</strong> <span id="savedSubject"></span></p>
+                            <p class="mb-1"><strong>Message:</strong> <span id="savedMessage"></span></p>
+                            <p class="feedback-time mb-0 text-muted"><strong>Time:</strong> <span id="savedTime"></span></p>
+                        </div>
+                    </div>
                     <button class="btn btn-submit w-100 rounded-pill" data-bs-dismiss="modal">
                         Close
                     </button>
